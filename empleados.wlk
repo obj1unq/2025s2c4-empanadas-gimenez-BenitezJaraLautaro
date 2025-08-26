@@ -1,28 +1,42 @@
 //Escribir aqui los objetos
 object galvan  {
-    var sueldo = 15000
+    var sueldoAhora = 15000 
 
-    method cambioSueldo(sueldoNuevo) {
-      sueldo = sueldoNuevo
+    method sueldo() {
+      return sueldoAhora 
     }
 
-
+    method cambiarSueldo(sueldoNuevo) {
+      sueldoAhora = sueldoNuevo
+    }
 }
 
 object baigorria {
-  const pagoPorEmpanada = 15
 
   var ventaEmpanadas = 0
 
-  method vendio_empandas(empanadasVendidas) {
+  method vender(empanadasVendidas) {
     ventaEmpanadas = empanadasVendidas
   }
   
-  method empanadasQueVedio() {
+  method empanadasQueVendio() {
     return ventaEmpanadas
   } 
+
+  method sueldoActual() {
+    return 15*ventaEmpanadas
+  }
 }
 
 object gimenez {
   var fondoParaSueldo = 300000
+
+  method pagarSueldo(empleado) {
+    fondoParaSueldo = fondoParaSueldo - empleado.sueldoActual()
+  }
+  method fondo() {
+    return fondoParaSueldo
+  }
+
+
 }
