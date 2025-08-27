@@ -13,7 +13,8 @@ object galvan  {
 
 object baigorria {
 
-  var ventaEmpanadas = 0
+  var ventaEmpanadas    = 0
+  var cobradoHastaAhora = 0
 
   method vender(empanadasVendidas) {
     ventaEmpanadas = empanadasVendidas
@@ -26,6 +27,15 @@ object baigorria {
   method sueldoActual() {
     return 15*ventaEmpanadas
   }
+
+  method totalCobrado() {
+    return cobradoHastaAhora
+  }
+
+  method cobrarSueldo() {
+    cobradoHastaAhora = cobradoHastaAhora + self.sueldoActual()
+    ventaEmpanadas = 0
+  }
 }
 
 object gimenez {
@@ -33,6 +43,7 @@ object gimenez {
 
   method pagarSueldo(empleado) {
     fondoParaSueldo = fondoParaSueldo - empleado.sueldoActual()
+    empleado.cobrarSueldo()
   }
   method fondo() {
     return fondoParaSueldo
