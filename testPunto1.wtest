@@ -2,6 +2,6 @@ import empleados.*
 
 test "punto1: Planteo inicial" {
   baigorria.vender(2)
-  assert.equals(30, baigorria.sueldoActual())
+  assert.equals(2, baigorria.empanadasQueVendio())
 }
 
