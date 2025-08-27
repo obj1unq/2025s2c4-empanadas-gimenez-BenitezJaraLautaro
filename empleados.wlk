@@ -1,6 +1,8 @@
 //Escribir aqui los objetos
 object galvan  {
     var sueldoAhora = 15000 
+    var deuda  = 0
+    var dinero = 0
 
     method sueldo() {
       return sueldoAhora 
@@ -8,6 +10,22 @@ object galvan  {
 
     method cambiarSueldo(sueldoNuevo) {
       sueldoAhora = sueldoNuevo
+    }
+
+    method dinero() {
+      return dinero
+    }
+
+    method deuda() {
+      return deuda
+    }
+    
+    method gastar(cuanto) {
+      if (cuanto <= dinero) {
+        dinero = dinero - cuanto
+      } else {
+        deuda = deuda - dinero
+      }
     }
 }
 
