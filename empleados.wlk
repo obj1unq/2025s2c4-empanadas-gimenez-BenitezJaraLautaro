@@ -3,7 +3,6 @@ object galvan  {
     var sueldoAhora = 15000 
     var deuda  = 0
     var dinero = 0
-    var gestion = 0 //esta varieble sirve para restarle el valor de deuda a dinero 
 
     method sueldoActual() {
       return sueldoAhora 
@@ -31,13 +30,12 @@ object galvan  {
     }
 
     method cobrarSueldo() {
+      const gestion = deuda
       dinero  = dinero + self.sueldoActual()
-      gestion = deuda
       deuda   = deuda  - dinero
       deuda   = 0.max(deuda)
       dinero  = dinero - gestion
       dinero  = 0.max(dinero)
-      gestion = 0
     }
 
 }
