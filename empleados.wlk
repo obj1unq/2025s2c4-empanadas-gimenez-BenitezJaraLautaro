@@ -49,7 +49,7 @@ object baigorria {
   var cobradoHastaAhora = 0
 
   method vender(empanadasVendidas) {
-    ventaEmpanadas = empanadasVendidas
+    ventaEmpanadas = ventaEmpanadas + empanadasVendidas
   }
   
   method empanadasQueVendio() {
