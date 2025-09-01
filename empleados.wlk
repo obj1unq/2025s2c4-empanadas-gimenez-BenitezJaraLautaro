@@ -3,7 +3,7 @@ object galvan  {
     var sueldoAhora = 15000 
     var deuda  = 0
     var dinero = 0
-
+a
     method sueldoActual() {
       return sueldoAhora 
     }
